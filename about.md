@@ -9,7 +9,7 @@ LLM-driven tooling — on AWS and Azure. Before that, I spent a decade in
 Special Operations.
 
 These posts are reposts from **sensibledefaults.io**, a blog I ran from 2021
-to 2023 with my friend Anthony Butt. The site is no longer online. I kept
+to 2023. The site is no longer online. I kept
 the posts I still think hold up and republished them here with their
 original publish dates.
 
