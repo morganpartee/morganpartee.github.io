@@ -7,6 +7,8 @@ author: "John"
 original_slug: easy-python-embeddings
 ---
 
+> **2026 note:** `text-embedding-ada-002` is deprecated — use `text-embedding-3-small`/`-large`, or open-weights models like `nomic-embed-text` if you want to stay off paid APIs. The Embedme package itself is unmaintained; treat this post as a sketch of the pattern, not a current recommendation.
+
 ## Motivation - Thank You!
 
 First, I got a DM from a no kidding stranger this morning, asking a question I've meant to answer for about a month now:
@@ -31,9 +33,7 @@ Embedme is a python package that allows you to easily create and search text emb
 
 Here's an example of how to use the Embedme class to create embeddings for chunks of text from the "Moby Dick" novel using the NLTK library and OpenAI's text-embedding-ada-002 model:
 
-python
-
-```
+```python
 import openai
 import nltk
 from more_itertools import chunked
@@ -72,9 +72,7 @@ You can include literally any other key and we'll return it to you so you can us
 
 Once you have your embeddings saved you can use the search method to find similar chunks of text to the one you searched for.
 
-python
-
-```
+```python
 # ...later
 from embedme import Embedme
 
@@ -88,9 +86,7 @@ embedme.search("whale")
 
 Gets us (among other things, but #2 was shortest):
 
-python
-
-```
+```python
  {'moby_dick_chunk_11':
     {'meta': {'name': 'moby_dick_chunk_11',
         'text': 'Do you see that whale now?" "Ay ay, sir! A shoal of Sperm Whales! There she blows! There she\r\nbreaches!" "Sing out! sing out every time!" "Ay Ay, sir! There she blows! there--there--THAR she\r\nblows--bowes--bo-o-os!" "How far off?" "Two miles and a half." "Thunder and lightning! so near! Call all hands." --J. ROSS BROWNE\'S\r\nETCHINGS OF A WHALING CRUIZE. 1846. "The Whale-ship Globe, on board of which vessel occurred the horrid\r\ntransactions we are about to relate, belonged to the island of\r\nNantucket." --"NARRATIVE OF THE GLOBE," BY LAY AND HUSSEY SURVIVORS. A.D. 1828.'},
@@ -106,9 +102,7 @@ Pinecone is so good for so many things, but overcomplication kills projects. Thi
 
 Once you've embedded all of your data, you can directly access the underlying embeddings (in a numpy array) after calling `.prepare_search()` (which happens pre-search normally, after things are added to the index).
 
-python
-
-```
+```python
 embedme.prepare_search()
 vecs = embedme.vectors # np array!
 ```

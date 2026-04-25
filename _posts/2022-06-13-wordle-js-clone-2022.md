@@ -13,9 +13,7 @@ I'm an okay chess player and React developer, and I wanted to combine the two wi
 
 ## Idea
 
-How could we take chess "tactical" puzzles, and turn them into a Wordle variant? A chess keyboard is a neccessity - I know notation pretty well, but struggle to process it quickly. After a week or two of work, I think I'm pretty close.
-
-![Game Screenshot](2022-06-13-14-01-39.png)
+How could we take chess "tactical" puzzles, and turn them into a Wordle variant? A chess keyboard is a necessity - I know notation pretty well, but struggle to process it quickly. After a week or two of work, I think I'm pretty close.
 
 ## Starting Points
 
@@ -37,8 +35,6 @@ I used [react-chessboard](https://github.com/Clariity/react-chessboard). Autosiz
 
 The board spans the middle of a 9x10 grid, the right column existing just to get spacing right.
 
-![Chess Board Example](./board.png)
-
 ### Chess Game
 
 Here is where it gets weird. I used [chess.js](https://github.com/jhlywa/chess.js/blob/master/README.md) to load the puzzle positions, and track moves. chess.js uses update methods to change the game, which doesn't play great with React. `react-chessboard` solves that problem with a `safeGameMutate` function, which I used:
@@ -59,7 +55,7 @@ Here is where it gets weird. I used [chess.js](https://github.com/jhlywa/chess.j
       })
 ```
 
-Which took a long time to figure out! Make sure to disable [React Strict Mode](/why-react-functions-run-twice/) or you'll get updates to the game twice while developing if the update is valid. In my case I had a position where Qxe6 was valid twice in a row, and the app would auto-move it! Unfortunately, I can't find a way to make `chess.js` play nice with Strict Mode.
+Which took a long time to figure out! Watch out for React Strict Mode here — in dev it'll double-invoke effects and you'll get updates to the game twice if the move is valid. In my case I had a position where Qxe6 was valid twice in a row, and the app would auto-move it. The right fix is to keep the chess instance out of mutable state (e.g. `useRef` it, or rebuild from a FEN string each time) rather than disable StrictMode.
 
 ### Puzzles!
 

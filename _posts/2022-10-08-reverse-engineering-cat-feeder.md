@@ -9,7 +9,7 @@ original_slug: cat-feeder
 
 ![overview](https://web.archive.org/web/2023/https://www.sensibledefaults.io/static/images/feeder/idea.jpg)
 
-I've been laughing about it this weekend and had to write it up - After some late-night Amazon'ing I got a [PetKit FreshElement Solo](https://amzn.to/3ecgCF7). I had two problems it could solve: low side project motivation, and loving [Target's Dark Chocolate Sea Salt Almonds](https://www.target.com/p/himalayan-salted-dark-chocolate-almonds-37oz-good-38-gather-8482/-/A-81418159) way too much. I'm a codemonkey - Why not feed my monkey brain when I push code?
+I've been laughing about it this weekend and had to write it up - After some late-night Amazon'ing I got a PetKit FreshElement Solo. I had two problems it could solve: low side project motivation, and loving [Target's Dark Chocolate Sea Salt Almonds](https://www.target.com/p/himalayan-salted-dark-chocolate-almonds-37oz-good-38-gather-8482/-/A-81418159) way too much. I'm a codemonkey - Why not feed my monkey brain when I push code?
 
 I couldn't find a USB candy dispenser (I even checked thinkgeek, nothing close!), so I figured I'd try a cat feeder. This thing rocks, and I'll show you how to replicate what I did.
 
@@ -52,7 +52,7 @@ But it filters and portions food like:
 
 So if it is 12mm tall sideways, it'll work fine. I plan to test jerky chunks and cheez balls in the future. It includes a desiccant packet in the lid to keep stuff fresh... So I expect it's pretty safe to get wild.
 
-As of writing they're about 70$, but they work great and are built well: [Buy Here](https://amzn.to/3ecgCF7)
+As of writing they're about $70, but they work great and are built well.
 
 ## App
 
@@ -72,7 +72,7 @@ And found this request:
 
 There's no real silver bullet here, I had to look through a few groups of requests to find the right one. But we can see it hits the `/latest/d4/saveDailyFeed` endpoint, which gives us a big hint! The `URLENCODED` section tells us that `amount`, `time`, and `deviceId` are included in the URL... So we can replicate it locally!
 
-Andy and I have covered how to do this on desktop [Here!](https://www.sensibledefaults.io/blog/dont-scrape/index)
+Andy and I have covered how to do this on desktop [here]({% post_url 2021-03-10-dont-scrape %}).
 
 ## Coding
 
@@ -80,9 +80,7 @@ Code is available [here!](https://github.com/morganpartee/pyPetKit)
 
 I started with [`geeks4hire`'s fork of PyPetKit](https://github.com/geeks4hire/pyPetKit). It had the auth flow worked out for me, I just had to add a way to hit the API. I knew the endpoint I had to hit from the packet above, so I added a generic function to send requests to the API to my fork of the package:
 
-py
-
-```
+```python
  def send_api_request(self, path, method="POST", params=None, json=None):
         """
         Sends an API request.
@@ -111,9 +109,7 @@ This looks complicated, but the headers were copied from someone doing exactly w
 
 Then getting those sweet sweet almonds is as easy as:
 
-py
-
-```
+```python
 from pypetkit import PetKitAPI
 from settings import (
     API_USERNAME,
@@ -153,7 +149,7 @@ And a little beep, followed by the beautiful sound of a reward hitting your *(do
 
 ## "Deploying"
 
-Deploying is a strong word, but that's what I'd call it. I'm running this locally so I don't dispense food when I'm away from home. I have an [Elgato Stream Deck](https://amzn.to/3CJsbwM) that I love, that I used to make the hotkey.
+Deploying is a strong word, but that's what I'd call it. I'm running this locally so I don't dispense food when I'm away from home. I have an Elgato Stream Deck that I love, that I used to make the hotkey.
 
 ![Hotkey](https://web.archive.org/web/2023/https://www.sensibledefaults.io/static/images/feeder/hotkey.png)
 
@@ -177,7 +173,7 @@ You'll see that the data for these products is sent in plaintext to and from the
 
 [Packet Capture for Android](https://play.google.com/store/apps/details?id=app.greyshirts.sslcapture&hl=en_US&gl=US)
 
-[Elgato Stream Deck](https://amzn.to/3CJsbwM)
+Elgato Stream Deck
 
 [Target's Dark Chocolate Sea Salt Almonds](https://www.target.com/p/himalayan-salted-dark-chocolate-almonds-37oz-good-38-gather-8482/-/A-81418159) (Seriously, they rock)
 

@@ -9,7 +9,7 @@ original_slug: dont-scrape
 
 For whatever reason, I get paid money to scrape data pretty often. Here's how Andy and I handle it, and how you can work faster by avoiding it. There are code snippets included that cover how to scrape and how to scrape <b>really fast</b>. The GitHub links are included for convenience below. Linkedin, email, or tweet us with questions! Huge thanks to Andy for putting together the "API hunting" screenshots, and co-leading this lecture with me!
 
-We didn't cover GraphQL too deeply, it's worth taking a look at deeper. It's the next "big thing" in internet stuff. This site uses it!
+We didn't cover GraphQL too deeply, but it's worth a look — especially when an "API" turns out to be a GraphQL endpoint that's much easier to query directly than to scrape around.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQF3Y9mNBO99aCs8oemll2rtmI8-kqu7eUDvpHuu1mBiXy_e3DFAhJKGNf4AU7ttT4d5A9uTMvU9nJ8/embed?start=false&loop=false" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
@@ -21,7 +21,7 @@ We didn't cover GraphQL too deeply, it's worth taking a look at deeper. It's the
 
 [Async Scraping Examples](https://github.com/morganpartee/python_code_examples/blob/master/async%20scraping.ipynb)
 
-[Curl to Python Converter](https://curl.trillworks.com/)
+[Curl Converter](https://curlconverter.com/)
 
 [Intro to GraphQL](https://towardsdatascience.com/connecting-to-a-graphql-api-using-python-246dda927840)
 

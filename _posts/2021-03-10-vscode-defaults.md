@@ -7,7 +7,9 @@ author: "John"
 original_slug: vscode-defaults
 ---
 
-**This is opinionated! If you dislike an extension, drop it. Let me know what I’m missing.**
+> **2026 note:** This is a snapshot of my 2021 setup. Bracket Pair Colorizer is now built into VSCode (so you can drop the extension), and TabNine has largely been displaced by Copilot / Cursor / Claude Code for AI completion.
+
+**This is opinionated! If you dislike an extension, drop it. Let me know what I'm missing.**
 
 VSCode Extensions I recommend (**Bold is a strong recommendation**):
 

@@ -29,7 +29,7 @@ If you're just starting out, remember your function has to take in arguments, an
 
 ## Train How You Work
 
-Exercism recently did a site redesign, and they have an in-browser editor. Don't use this. I highly recommend VSCode, and I have a bunch of extensions that I recommend [here](/vscode-defaults-feb22). Use the Exercism command line tool to download and submit exercises. The [walkthrough here](https://Exercism.org/cli-walkthrough) is really good.
+Exercism recently did a site redesign, and they have an in-browser editor. Don't use this. I highly recommend VSCode (extension recommendations [here]({% post_url 2021-03-10-vscode-defaults %})). Use the Exercism command line tool to download and submit exercises. The [walkthrough here](https://Exercism.org/cli-walkthrough) is really good.
 
 Go ahead and start a git repo for this work (I'd make it private), and keep your progress there too. I like GitHub for this! [Here is their beginner's tutorial](https://docs.github.com/en/get-started/quickstart/hello-world). It's a little involved, but git is a life skill you'll need.
 
@@ -47,4 +47,4 @@ Happy coding!
 
 ## Learning Python?
 
-Exercism is a big part of my plan, but there are a few more resources at [The Python Powerhouse Plan](/python-powerhouse/)! And join us on LinkedIn [Here](https://www.linkedin.com/groups/12623715/), post your successes and struggles! Meeting other folks that are learning is a huge help.
+Exercism is a big part of my plan. Join us on LinkedIn [here](https://www.linkedin.com/groups/12623715/) and post your successes and struggles — meeting other folks that are learning is a huge help.

@@ -7,6 +7,8 @@ author: "John"
 original_slug: gpt-json
 ---
 
+> **2026 note:** This was written before structured outputs and tool use were native to the API. Today I'd reach for `response_format={"type": "json_object"}` (OpenAI), tool/function calling, or Anthropic's tool use — all of which solve this problem more reliably than prompt-engineering JSON shapes. Keeping the post up because the underlying point — that input format affects output reliability — still holds.
+
 ## Making GPT Repeatable is hard
 
 If you haven't heard of JSON that is fine - it's just a way we send data on the internet a lot of the time. It's computer and human-readable which is nice, but if we rely on GPT to do it we can get mixed results. They were mixed for me (badly, badly mixed) when I found this tweet a few weeks ago:
@@ -23,11 +25,9 @@ Riley's example of translations is an interesting one - If you're using an aweso
 
 I've heard several folks now say something like "We have all of these meeting notes, but they're so hard to follow!". Of course, there's a GPT powered solution to this.
 
-Here's one approach. I had ChatGPT write this with me, so it is a litte verbose, but it mostly works.
+Here's one approach. I had ChatGPT write this with me, so it is a little verbose, but it mostly works.
 
-json
-
-```
+```json
 Summarize the following meeting notes, by extracting the people, places,
 and ideas discussed in the text and outputting a JSON object with an array
 of these entities, using the following format:
@@ -66,13 +66,11 @@ This is the method in my little project CodeGPT - where JSON was a pain.
 >
 > — Riley Goodside (@goodside) [August 10, 2022](https://twitter.com/goodside/status/1557227829145882624?ref_src=twsrc%5Etfw)
 
-The catch here is we use `>` to indicate that this is *different*. The 'key' for each value is on the line above the `>` block, and we count anything with a `>` in front of it as a part of the response until we get the next key without the carrot.
+The catch here is we use `>` to indicate that this is *different*. The 'key' for each value is on the line above the `>` block, and we count anything with a `>` in front of it as a part of the response until we get the next key without the caret.
 
-The big problem this solves is JSON is pretty notoriusly finicky - and if we're trying to bulk process results those failures count! That's still money we've spent that we now can't recover - because code has quotes in it, and GPT doesn't know how to escape them.
+The big problem this solves is JSON is pretty notoriously finicky - and if we're trying to bulk process results those failures count! That's still money we've spent that we now can't recover - because code has quotes in it, and GPT doesn't know how to escape them.
 
 My example looks something like this (The code we're working on is in a block similar above this section):
-
-ref
 
 ```
 You may only send me complete files.

@@ -21,7 +21,7 @@ So, how do you get your start in software? Two big things. Pick a language, pick
 
 **It doesn't matter.** Seriously. Some languages are better for some things, and I'll talk about that in a minute, but don't waste time figuring out the best language for something yet. *Definitely* don't try to look up salaries and base your choice around that.
 
-Personally? I'd say go learn Python. The syntax is easy if you've never done software before. [We have a roadmap here!](/python-powerhouse)
+Personally? I'd say go learn Python. The syntax is easy if you've never done software before.
 
 - If language doesn't matter, what should I focus on?
 
@@ -57,7 +57,7 @@ Nope. Tony doesn't like it, but I recommend [Ansible.](https://www.ansible.com/)
 
 - What else do I need to learn?
 
-Pick an IDE, and learn how it works. An IDE is just a fancy text editor, but it's a gamechanger with the right one. For Python, I have my [SensibleDefault setup here for VSCode.](/vscode-defaults) If you hate it, try another one. VSCode is like the Python of IDE's, it's the second best for everything.
+Pick an IDE, and learn how it works. An IDE is just a fancy text editor, but it's a gamechanger with the right one. For Python, I have my [SensibleDefault setup here for VSCode]({% post_url 2021-03-10-vscode-defaults %}). If you hate it, try another one. VSCode is like the Python of IDE's, it's the second best for everything.
 
 [Git.](https://git-scm.com/) Git is how real developers store their code. It's a brilliant, beautiful system that makes our lives a lot easier. GitHub has a good intro, give it a shot [here.](https://lab.github.com/githubtraining/introduction-to-github) **You will use this at work, be able to talk about it for an interview!** While you're learning, make a GitHub repo and use it to store your code. Eventually you can turn that into a portfolio, **which helps you get hired.**
 

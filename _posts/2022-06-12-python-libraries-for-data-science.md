@@ -52,4 +52,4 @@ For regular Python data (in lists, dictionaries, etc):
 
 That is most of what you need to do the daily work of a data scientist. Sometimes you'll find a specific problem (especially in signal processing!) that might have a better specialty package. Search Medium and Google for those! Kalman filters are a great example, good luck writing one yourself without `pykalman`!
 
-Before you start installing packages though, make sure you're setup with [VSCode and some plugins](/vscode-defaults-feb22) (Also, polish those [Python skills](/python-powerhouse))
+Before you start installing packages though, make sure you're set up with [VSCode and some plugins]({% post_url 2021-03-10-vscode-defaults %}).
